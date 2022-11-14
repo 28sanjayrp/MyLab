@@ -12,7 +12,8 @@ pipeline{
         
         stage ('Git Clone'){
             steps {
-                git branch: 'master', url: '', credentials: ''
+                git credentialsId: 'GitHubCred', url: 'https://github.com/28sanjayrp/my-app.git'
+                //git branch: 'master', url: '', credentials: ''
             }
         }
         
