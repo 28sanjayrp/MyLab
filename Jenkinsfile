@@ -66,12 +66,14 @@ pipeline{
         }
             
             
-            // stage 7. email notification
+        } //emd of stages
+        
+         // stage 7. email notification
             post {
         always {
             emailext body: 'Pipeline successfull', compressLog: true, recipientProviders: [requestor(), developers(), contributor()], subject: 'Pipeline successfull'
             //emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }
-
-}
+            
+} // end of pipeline
