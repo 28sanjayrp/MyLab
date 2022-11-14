@@ -21,7 +21,8 @@ pipeline{
         
         stage ('Maven-build-creating war files'){
             steps {
-                sh 'mvn clean compile package install'
+                sh 'mvn clean package install'
+                //sh 'mvn clean package install'
             }
         }
 
